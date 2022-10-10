@@ -1,0 +1,128 @@
+[2022-10-10T10:27:50.630Z] Dev Containers 0.256.0 in VS Code 1.72.0 (64bbfbf67ada9953918d72e1df2f4d8e537d340e).
+[2022-10-10T10:27:50.630Z] Start: Resolving Remote
+[2022-10-10T10:27:50.648Z] Setting up container for folder or workspace: /Users/oinopion/Dev/devcontainer-frontend-repro
+[2022-10-10T10:27:50.659Z] Start: Check Docker is running
+[2022-10-10T10:27:50.659Z] Start: Run: docker version --format {{.Server.APIVersion}}
+[2022-10-10T10:27:50.727Z] Stop (68 ms): Run: docker version --format {{.Server.APIVersion}}
+[2022-10-10T10:27:50.728Z] Server API version: 1.41
+[2022-10-10T10:27:50.728Z] Stop (69 ms): Check Docker is running
+[2022-10-10T10:27:50.728Z] Start: Run: docker volume ls -q
+[2022-10-10T10:27:50.779Z] Stop (51 ms): Run: docker volume ls -q
+[2022-10-10T10:27:50.783Z] Start: Run: docker ps -q -a --filter label=vsch.local.folder=/Users/oinopion/Dev/devcontainer-frontend-repro --filter label=vsch.quality=stable
+[2022-10-10T10:27:50.834Z] Stop (51 ms): Run: docker ps -q -a --filter label=vsch.local.folder=/Users/oinopion/Dev/devcontainer-frontend-repro --filter label=vsch.quality=stable
+[2022-10-10T10:27:50.834Z] Start: Run: /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper --ms-enable-electron-run-as-node /Users/oinopion/.vscode/extensions/ms-vscode-remote.remote-containers-0.256.0/dist/spec-node/devContainersSpecCLI.js up --user-data-folder /Users/oinopion/Library/Application Support/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --workspace-folder /Users/oinopion/Dev/devcontainer-frontend-repro --workspace-mount-consistency cached --id-label devcontainer.local_folder=/Users/oinopion/Dev/devcontainer-frontend-repro --log-level debug --log-format json --config /Users/oinopion/Dev/devcontainer-frontend-repro/.devcontainer/devcontainer.json --default-user-env-probe loginInteractiveShell --remove-existing-container --mount type=volume,source=vscode,target=/vscode,external=true --skip-post-create --update-remote-user-uid-default on --mount-workspace-git-root true
+[2022-10-10T10:27:50.934Z] @devcontainers/cli 0.19.0. Node.js v16.14.2. darwin 21.6.0 arm64.
+[2022-10-10T10:27:50.934Z] Start: Run: docker buildx version
+[2022-10-10T10:27:51.019Z] Stop (85 ms): Run: docker buildx version
+[2022-10-10T10:27:51.019Z] github.com/docker/buildx v0.9.1 ed00243a0ce2a0aee75311b06e32d33b44729689
+[2022-10-10T10:27:51.019Z] 
+[2022-10-10T10:27:51.019Z] Start: Resolving Remote
+[2022-10-10T10:27:51.021Z] Start: Run: docker-compose version --short
+[2022-10-10T10:27:51.090Z] Stop (69 ms): Run: docker-compose version --short
+[2022-10-10T10:27:51.090Z] Docker Compose version: 2.10.2
+[2022-10-10T10:27:51.090Z] Start: Run: docker ps -q -a --filter label=com.docker.compose.project=devcontainer-frontend-repro_devcontainer --filter label=com.docker.compose.service=app
+[2022-10-10T10:27:51.144Z] Stop (54 ms): Run: docker ps -q -a --filter label=com.docker.compose.project=devcontainer-frontend-repro_devcontainer --filter label=com.docker.compose.service=app
+[2022-10-10T10:27:51.144Z] Start: Run: docker-compose -f /Users/oinopion/Dev/devcontainer-frontend-repro/.devcontainer/docker-compose.yml --profile * config
+[2022-10-10T10:27:51.222Z] Stop (78 ms): Run: docker-compose -f /Users/oinopion/Dev/devcontainer-frontend-repro/.devcontainer/docker-compose.yml --profile * config
+[2022-10-10T10:27:51.222Z] name: devcontainer
+services:
+  app:
+    build:
+      context: /Users/oinopion/Dev/devcontainer-frontend-repro
+      dockerfile: .devcontainer/Dockerfile
+    command:
+    - sleep
+    - infinity
+    networks:
+      default: null
+    volumes:
+    - type: bind
+      source: /Users/oinopion/Dev/devcontainer-frontend-repro
+      target: /workspace
+      bind:
+        create_host_path: true
+networks:
+  default:
+    name: devcontainer_default
+[2022-10-10T10:27:51.223Z] Start: Run: docker events --format {{json .}} --filter event=start
+[2022-10-10T10:27:51.224Z] PersistedPath=/Users/oinopion/Library/Application Support/Code/User/globalStorage/ms-vscode-remote.remote-containers/data, ContainerHasLabels=false
+[2022-10-10T10:27:51.225Z] Start: Run: docker-compose -f /Users/oinopion/Dev/devcontainer-frontend-repro/.devcontainer/docker-compose.yml --profile * config
+[2022-10-10T10:27:51.301Z] Stop (76 ms): Run: docker-compose -f /Users/oinopion/Dev/devcontainer-frontend-repro/.devcontainer/docker-compose.yml --profile * config
+[2022-10-10T10:27:51.301Z] name: devcontainer
+services:
+  app:
+    build:
+      context: /Users/oinopion/Dev/devcontainer-frontend-repro
+      dockerfile: .devcontainer/Dockerfile
+    command:
+    - sleep
+    - infinity
+    networks:
+      default: null
+    volumes:
+    - type: bind
+      source: /Users/oinopion/Dev/devcontainer-frontend-repro
+      target: /workspace
+      bind:
+        create_host_path: true
+networks:
+  default:
+    name: devcontainer_default
+[2022-10-10T10:27:51.302Z] Start: Run: docker inspect --type image mcr.microsoft.com/vscode/devcontainers/python:0-3.10-bullseye
+[2022-10-10T10:27:51.355Z] Stop (53 ms): Run: docker inspect --type image mcr.microsoft.com/vscode/devcontainers/python:0-3.10-bullseye
+[2022-10-10T10:27:51.523Z] local container features stored at: /Users/oinopion/.vscode/extensions/ms-vscode-remote.remote-containers-0.256.0/dist/node_modules/vscode-dev-containers/container-features
+[2022-10-10T10:27:51.523Z] Start: Run: tar --no-same-owner -x -f -
+[2022-10-10T10:27:51.537Z] Stop (14 ms): Run: tar --no-same-owner -x -f -
+[2022-10-10T10:27:51.542Z] Start: Run: docker build -t dev_container_feature_content_temp -f /var/folders/7g/dgr663g5013582w397ztzxkc0000gn/T/devcontainercli/container-features/0.19.0-1665397671522/Dockerfile.buildContent /var/folders/7g/dgr663g5013582w397ztzxkc0000gn/T/devcontainercli/container-features/0.19.0-1665397671522
+[2022-10-10T10:27:51.810Z] [+] Building 0.0s (0/1)                                                         
+[2022-10-10T10:27:51.877Z] [+] Building 0.1s (5/5) FINISHED                                                
+ => [internal] load build definition from Dockerfile.buildContent          0.0s
+ => => transferring dockerfile: 100B                                       0.0s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+[2022-10-10T10:27:51.877Z]  => [internal] load build context                                          0.0s
+ => => transferring context: 271.31kB                                      0.0s
+ => CACHED [1/1] COPY . /tmp/build-features/                               0.0s
+ => exporting to image                                                     0.0s
+ => => exporting layers                                                    0.0s
+ => => writing image sha256:565ad16b063ca3725b9fb8bba749f4d9f28b5b6bd1e60  0.0s
+ => => naming to docker.io/library/dev_container_feature_content_temp      0.0s
+[2022-10-10T10:27:51.930Z] 
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+[2022-10-10T10:27:51.933Z] Stop (391 ms): Run: docker build -t dev_container_feature_content_temp -f /var/folders/7g/dgr663g5013582w397ztzxkc0000gn/T/devcontainercli/container-features/0.19.0-1665397671522/Dockerfile.buildContent /var/folders/7g/dgr663g5013582w397ztzxkc0000gn/T/devcontainercli/container-features/0.19.0-1665397671522
+[2022-10-10T10:27:51.934Z] Docker Compose override file for building image:
+version: '3.8'
+
+services:
+  app:
+    build:
+      dockerfile: /var/folders/7g/dgr663g5013582w397ztzxkc0000gn/T/devcontainercli/container-features/0.19.0-1665397671522/Dockerfile-with-features
+      target: dev_containers_target_stage
+      args:
+        - BUILDKIT_INLINE_CACHE=1
+        - _DEV_CONTAINERS_BASE_IMAGE=dev_container_auto_added_stage_label
+        - _DEV_CONTAINERS_IMAGE_USER=root
+        - _DEV_CONTAINERS_FEATURE_CONTENT_SOURCE=dev_container_feature_content_temp
+
+[2022-10-10T10:27:51.934Z] Start: Run: docker-compose --project-name devcontainer-frontend-repro_devcontainer -f /Users/oinopion/Dev/devcontainer-frontend-repro/.devcontainer/docker-compose.yml -f /Users/oinopion/Library/Application Support/Code/User/globalStorage/ms-vscode-remote.remote-containers/data/docker-compose/docker-compose.devcontainer.build-1665397671934.yml build
+[2022-10-10T10:27:52.221Z] [+] Building 0.0s (0/0)                                                         
+[2022-10-10T10:27:52.304Z] [+] Building 0.1s (2/2) FINISHED                                                
+ => [internal] load build definition from Dockerfile-with-features         0.0s
+ => => transferring dockerfile: 3.60kB                                     0.0s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+failed to solve: rpc error: code = Unknown desc = failed to solve with frontend dockerfile.v0: failed to create LLB definition: dockerfile parse error line 7: unknown instruction: APT-GET
+[2022-10-10T10:27:52.309Z] Stop (375 ms): Run: docker-compose --project-name devcontainer-frontend-repro_devcontainer -f /Users/oinopion/Dev/devcontainer-frontend-repro/.devcontainer/docker-compose.yml -f /Users/oinopion/Library/Application Support/Code/User/globalStorage/ms-vscode-remote.remote-containers/data/docker-compose/docker-compose.devcontainer.build-1665397671934.yml build
+[2022-10-10T10:27:52.310Z] Error: Command failed: docker-compose --project-name devcontainer-frontend-repro_devcontainer -f /Users/oinopion/Dev/devcontainer-frontend-repro/.devcontainer/docker-compose.yml -f /Users/oinopion/Library/Application Support/Code/User/globalStorage/ms-vscode-remote.remote-containers/data/docker-compose/docker-compose.devcontainer.build-1665397671934.yml build
+[2022-10-10T10:27:52.310Z]     at pd (/Users/oinopion/.vscode/extensions/ms-vscode-remote.remote-containers-0.256.0/dist/spec-node/devContainersSpecCLI.js:259:426)
+[2022-10-10T10:27:52.310Z]     at process.processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-10-10T10:27:52.310Z]     at async ZF (/Users/oinopion/.vscode/extensions/ms-vscode-remote.remote-containers-0.256.0/dist/spec-node/devContainersSpecCLI.js:259:2424)
+[2022-10-10T10:27:52.310Z]     at async XF (/Users/oinopion/.vscode/extensions/ms-vscode-remote.remote-containers-0.256.0/dist/spec-node/devContainersSpecCLI.js:241:2391)
+[2022-10-10T10:27:52.310Z]     at async bD (/Users/oinopion/.vscode/extensions/ms-vscode-remote.remote-containers-0.256.0/dist/spec-node/devContainersSpecCLI.js:303:2193)
+[2022-10-10T10:27:52.310Z]     at async ys (/Users/oinopion/.vscode/extensions/ms-vscode-remote.remote-containers-0.256.0/dist/spec-node/devContainersSpecCLI.js:303:3182)
+[2022-10-10T10:27:52.310Z]     at async UL (/Users/oinopion/.vscode/extensions/ms-vscode-remote.remote-containers-0.256.0/dist/spec-node/devContainersSpecCLI.js:423:10319)
+[2022-10-10T10:27:52.310Z]     at async ML (/Users/oinopion/.vscode/extensions/ms-vscode-remote.remote-containers-0.256.0/dist/spec-node/devContainersSpecCLI.js:423:10075)
+[2022-10-10T10:27:52.312Z] Stop (1478 ms): Run: /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper --ms-enable-electron-run-as-node /Users/oinopion/.vscode/extensions/ms-vscode-remote.remote-containers-0.256.0/dist/spec-node/devContainersSpecCLI.js up --user-data-folder /Users/oinopion/Library/Application Support/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --workspace-folder /Users/oinopion/Dev/devcontainer-frontend-repro --workspace-mount-consistency cached --id-label devcontainer.local_folder=/Users/oinopion/Dev/devcontainer-frontend-repro --log-level debug --log-format json --config /Users/oinopion/Dev/devcontainer-frontend-repro/.devcontainer/devcontainer.json --default-user-env-probe loginInteractiveShell --remove-existing-container --mount type=volume,source=vscode,target=/vscode,external=true --skip-post-create --update-remote-user-uid-default on --mount-workspace-git-root true
+[2022-10-10T10:27:52.312Z] Exit code 1
+[2022-10-10T10:27:52.313Z] Command failed: /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper --ms-enable-electron-run-as-node /Users/oinopion/.vscode/extensions/ms-vscode-remote.remote-containers-0.256.0/dist/spec-node/devContainersSpecCLI.js up --user-data-folder /Users/oinopion/Library/Application Support/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --workspace-folder /Users/oinopion/Dev/devcontainer-frontend-repro --workspace-mount-consistency cached --id-label devcontainer.local_folder=/Users/oinopion/Dev/devcontainer-frontend-repro --log-level debug --log-format json --config /Users/oinopion/Dev/devcontainer-frontend-repro/.devcontainer/devcontainer.json --default-user-env-probe loginInteractiveShell --remove-existing-container --mount type=volume,source=vscode,target=/vscode,external=true --skip-post-create --update-remote-user-uid-default on --mount-workspace-git-root true
+[2022-10-10T10:27:52.314Z] Exit code 1
